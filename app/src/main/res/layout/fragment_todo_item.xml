@@ -1,191 +1,195 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/itemContainer"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/label_fragment_todo_item_container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".TodoItemFragment">
-
-
+    tools:context=".Fragment.TodoItemFragment">
 
 
     <ScrollView
-        android:id="@+id/scroll"
+        android:id="@+id/label_fragment_todo_item_scroll"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearSave">
+        app:layout_constraintTop_toBottomOf="parent">
 
         <android.support.constraint.ConstraintLayout
-            android:id="@+id/constLayout"
+            android:id="@+id/label_fragment_todo_constr_lay"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
 
             <EditText
-                android:id="@+id/title"
+                android:id="@+id/input_fragment_todo_item_title"
+                android:theme="@style/EditTextStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="5dp"
-                android:layout_marginTop="50dp"
-                android:hint="Title"
-                android:textSize="20dp"
-                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="@dimen/margin_top"
+                android:hint="@string/label_fragment_todo_item_hint_title"
+                android:padding="@dimen/padding"
                 app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent" />
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <EditText
-                android:id="@+id/description"
+                android:id="@+id/input_fragment_todo_item_description"
+                android:theme="@style/EditTextStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="5dp"
-                android:layout_marginTop="10dp"
-                android:hint="Description"
+                android:layout_marginTop="@dimen/margin_top"
+                android:hint="@string/label_fragment_todo_item_hint_descr"
                 android:lines="3"
                 android:maxLines="3"
-                android:textSize="20dp"
+                android:padding="@dimen/padding"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/title" />
+                app:layout_constraintTop_toBottomOf="@id/input_fragment_todo_item_title" />
 
 
             <EditText
-                android:id="@+id/date"
+                android:id="@+id/input_fragment_todo_item_date"
+                style="@style/EditTextStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="5dp"
-                android:layout_marginTop="5dp"
+                android:layout_marginStart="@dimen/margin_start"
+                android:layout_marginTop="@dimen/margin_top"
                 android:clickable="true"
                 android:focusable="false"
-                android:text="01/01/2018"
-                android:textSize="20dp"
+                android:padding="@dimen/padding"
+                android:text="@string/label_fragment_todo_item_date_txt"
                 app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/description" />
+                app:layout_constraintTop_toBottomOf="@id/input_fragment_todo_item_description" />
 
 
             <EditText
-                android:id="@+id/time"
+                android:id="@+id/input_fragment_todo_item_time"
+                android:theme="@style/EditTextStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:focusable="false"
-                android:text="11:50"
-                android:textSize="20dp"
+                android:layout_marginTop="@dimen/margin_top"
+                android:focusable="true"
+                android:padding="@dimen/padding"
+                android:text="@string/label_fragment_todo_item_time_txt"
                 app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/date"
-                app:layout_constraintTop_toBottomOf="@+id/description" />
+                app:layout_constraintStart_toEndOf="@id/input_fragment_todo_item_date"
+                app:layout_constraintTop_toBottomOf="@id/input_fragment_todo_item_description" />
 
             <CheckBox
-                android:id="@+id/reminder"
+                android:id="@+id/label_fragment_todo_item_reminder"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="5dp"
-                android:layout_marginTop="5dp"
-                android:text="Reminder"
-                android:textSize="20dp"
+                android:layout_marginStart="@dimen/margin_start"
+                android:layout_marginTop="@dimen/margin_top"
+                android:text="@string/label_fragment_todo_item_reminder"
+                android:textSize="20sp"
                 app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/time" />
+                app:layout_constraintTop_toBottomOf="@id/input_fragment_todo_item_time" />
 
             <CheckBox
-                android:id="@+id/repeat"
+                android:id="@+id/label_fragment_todo_item_repeat"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="5dp"
-                android:layout_marginTop="5dp"
-                android:text="Repeat"
-                android:textSize="20dp"
+                android:layout_marginStart="@dimen/margin_start"
+                android:layout_marginTop="@dimen/margin_top"
+                android:text="@string/label_fragment_todo_item_repeat"
+                android:textSize="20sp"
                 app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/reminder"
+                app:layout_constraintTop_toBottomOf="@id/label_fragment_todo_item_reminder"
 
                 />
 
 
             <RadioGroup
-                android:id="@+id/radioGroup"
+                android:id="@+id/label_fragment_todo_item_radiogroup"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="5dp"
+                android:layout_marginStart="@dimen/margin_start"
                 android:visibility="gone"
                 app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/repeat"
-                app:layout_goneMarginTop="5dp">
+                app:layout_constraintTop_toBottomOf="@id/label_fragment_todo_item_repeat"
+                app:layout_goneMarginTop="@dimen/gone_margin_top">
 
                 <RadioButton
-                    android:id="@+id/daily"
+                    android:id="@+id/label_fragment_todo_item_daily"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Daily"
-                    android:textSize="15dp" />
+                    android:text="@string/label_fragment_todo_item_daily"
+                    android:textSize="15sp" />
 
                 <RadioButton
-                    android:id="@+id/weekly"
+                    android:id="@+id/label_fragment_todo_item_weekly"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Weekly"
-                    android:textSize="15dp" />
+                    android:text="@string/label_fragment_todo_item_weekly"
+                    android:textSize="15sp" />
 
                 <RadioButton
-                    android:id="@+id/monthly"
+                    android:id="@+id/label_fragment_todo_item_monthly"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Monthly"
-                    android:textSize="15dp" />
+                    android:text="@string/label_fragment_todo_item_monthly"
+                    android:textSize="15sp" />
             </RadioGroup>
 
 
             <TextView
-                android:id="@+id/priority"
+                android:id="@+id/label_fragment_todo_item_priority"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="20dp"
-                android:layout_marginLeft="5dp"
-                android:layout_marginTop="20dp"
-                android:text="Priority"
-                android:textSize="25dp"
+                android:layout_marginBottom="@dimen/view_margin_bottom"
+                android:layout_marginStart="@dimen/margin_start"
+                android:layout_marginTop="@dimen/margin_top"
+                android:padding="@dimen/padding"
+                android:text="@string/label_fragment_todo_item_priority"
+                android:textSize="25sp"
                 app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/radioGroup" />
+                app:layout_constraintTop_toBottomOf="@id/label_fragment_todo_item_radiogroup" />
 
 
             <EditText
-                android:id="@+id/priorityValue"
+                android:theme="@style/EditTextStyle"
+                android:id="@+id/label_fragment_todo_item_priority_value"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="20dp"
-                android:layout_marginLeft="15dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginBottom="@dimen/view_margin_bottom"
+                android:layout_marginStart="@dimen/margin_start"
+                android:layout_marginTop="@dimen/margin_top"
                 android:clickable="false"
                 android:focusable="false"
-                android:text="1"
-                android:textSize="25dp"
-                app:layout_constraintStart_toEndOf="@id/priority"
-                app:layout_constraintTop_toBottomOf="@id/radioGroup" />
+                android:padding="@dimen/padding"
+                android:text="@string/label_fragment_todo_item_priority_value_txt"
+                app:layout_constraintStart_toEndOf="@id/label_fragment_todo_item_priority"
+                app:layout_constraintTop_toBottomOf="@id/label_fragment_todo_item_radiogroup" />
 
 
             <Button
-                android:id="@+id/up"
-                android:layout_width="72dp"
-                android:layout_height="30dp"
-                android:layout_marginBottom="20dp"
-                android:layout_marginLeft="15dp"
-                android:layout_marginTop="8dp"
+                android:id="@+id/action_fragment_todo_item_up"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/view_margin_bottom"
+                android:layout_marginStart="@dimen/margin_start"
+                android:layout_marginTop="@dimen/margin_top"
                 android:background="@android:color/transparent"
                 android:drawableStart="@android:drawable/arrow_up_float"
-                app:layout_constraintStart_toEndOf="@id/priorityValue"
-                app:layout_constraintTop_toBottomOf="@id/radioGroup" />
+                android:padding="@dimen/padding"
+                app:layout_constraintStart_toEndOf="@id/label_fragment_todo_item_priority_value"
+                app:layout_constraintTop_toBottomOf="@id/label_fragment_todo_item_radiogroup" />
 
 
             <Button
-                android:id="@+id/down"
-                android:layout_width="72dp"
-                android:layout_height="30dp"
-                android:layout_marginBottom="20dp"
-                android:layout_marginLeft="15dp"
+                android:id="@+id/action_fragment_todo_item_down"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/view_margin_bottom"
+                android:layout_marginStart="@dimen/margin_start"
                 android:background="@android:color/transparent"
                 android:drawableStart="@android:drawable/arrow_down_float"
-                app:layout_constraintStart_toEndOf="@id/priorityValue"
-                app:layout_constraintTop_toBottomOf="@id/up" />
+                android:padding="@dimen/padding"
+                app:layout_constraintStart_toEndOf="@id/label_fragment_todo_item_priority_value"
+                app:layout_constraintTop_toBottomOf="@id/action_fragment_todo_item_up" />
 
         </android.support.constraint.ConstraintLayout>
     </ScrollView>

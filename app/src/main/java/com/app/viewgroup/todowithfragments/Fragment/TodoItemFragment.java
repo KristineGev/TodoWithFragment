@@ -1,10 +1,7 @@
-package com.app.viewgroup.todowithfragments;
+package com.app.viewgroup.todowithfragments.Fragment;
 
 import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
-import android.content.Context;
-import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 
 import android.support.annotation.Nullable;
@@ -24,8 +21,10 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TimePicker;
 
+import com.app.viewgroup.todowithfragments.R;
+import com.app.viewgroup.todowithfragments.TodoItem;
+
 import java.util.Calendar;
-import java.util.Date;
 
 
 public class TodoItemFragment extends android.app.Fragment {
@@ -63,17 +62,17 @@ public class TodoItemFragment extends android.app.Fragment {
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         //  super.onViewCreated(view, savedInstanceState);
 
-        priorityValue = (EditText) view.findViewById(R.id.priorityValue);
-        downBtn = (Button) view.findViewById(R.id.down);
-        upBtn = (Button) view.findViewById(R.id.up);
+        priorityValue = (EditText) view.findViewById(R.id.label_fragment_todo_item_priority_value);
+        downBtn = (Button) view.findViewById(R.id.action_fragment_todo_item_down);
+        upBtn = (Button) view.findViewById(R.id.action_fragment_todo_item_up);
 
-        title = (EditText) view.findViewById(R.id.title);
-        description = (EditText) view.findViewById(R.id.description);
-        date = (EditText) view.findViewById(R.id.date);
-        time = (EditText) view.findViewById(R.id.time);
-        repeat = (CheckBox) view.findViewById(R.id.repeat);
-        radioGroup = (RadioGroup) view.findViewById(R.id.radioGroup);
-        layout = (ConstraintLayout) view.findViewById(R.id.constLayout);
+        title = (EditText) view.findViewById(R.id.input_fragment_todo_item_title);
+        description = (EditText) view.findViewById(R.id.input_fragment_todo_item_description);
+        date = (EditText) view.findViewById(R.id.input_fragment_todo_item_date);
+        time = (EditText) view.findViewById(R.id.input_fragment_todo_item_time);
+        repeat = (CheckBox) view.findViewById(R.id.label_fragment_todo_item_repeat);
+        radioGroup = (RadioGroup) view.findViewById(R.id.label_fragment_todo_item_radiogroup);
+        layout = (ConstraintLayout) view.findViewById(R.id.label_fragment_todo_constr_lay);
 
         counter = Integer.parseInt(priorityValue.getText().toString());
 

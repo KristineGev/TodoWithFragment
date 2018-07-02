@@ -8,4 +8,11 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+
+    <style name="EditTextStyle" parent="Base.TextAppearance.AppCompat.Widget.TextView.SpinnerItem">
+        <item name="textSize">25sp</item>
+        <item name="textColor">#ff000000</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
 </resources>

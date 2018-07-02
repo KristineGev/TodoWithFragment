@@ -7,6 +7,9 @@ import java.util.Date;
 
 public class TodoItem   implements Serializable {
 
+
+
+
 private String title;
 private String description;
 private String date;

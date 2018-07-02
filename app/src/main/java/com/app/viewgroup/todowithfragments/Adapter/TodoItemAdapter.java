@@ -1,4 +1,4 @@
-package com.app.viewgroup.todowithfragments;
+package com.app.viewgroup.todowithfragments.Adapter;
 
 
 import android.support.annotation.NonNull;
@@ -6,6 +6,10 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.app.viewgroup.todowithfragments.R;
+import com.app.viewgroup.todowithfragments.TodoItem;
+import com.app.viewgroup.todowithfragments.ViewHolder.TodoItemHolder;
 
 import java.util.ArrayList;
 import java.util.Collections;

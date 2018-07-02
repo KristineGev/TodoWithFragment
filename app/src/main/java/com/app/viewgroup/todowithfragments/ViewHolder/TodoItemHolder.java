@@ -1,9 +1,11 @@
-package com.app.viewgroup.todowithfragments;
+package com.app.viewgroup.todowithfragments.ViewHolder;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.app.viewgroup.todowithfragments.R;
 
 public class TodoItemHolder extends RecyclerView.ViewHolder {
 

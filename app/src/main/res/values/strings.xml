@@ -1,6 +1,28 @@
 <resources>
     <string name="app_name">Todo With Fragments</string>
+    <string name="label_fragment_todo_item_container">itemContainer</string>
+    <string name="label_fragment_todo_item_scroll">scroll</string>
+    <string name="label_fragment_todo_item_constr_lay">constLayout</string>
+    <string name="input_fragment_todo_item_title">title</string>
+    <string name="input_fragment_to_item_description">description</string>
+    <string name="label_fragment_todo_item_hint_title">Title</string>
+    <string name="label_fragment_todo_item_hint_descr">Description</string>
+    <string name="input_fragment_todo_item_date">date</string>
+    <string name="label_fragment_todo_item_date_txt">01/01/2018</string>
+    <string name="input_fragment_todo_item_time">time</string>
+    <string name="label_fragment_todo_item_time_txt">12:00</string>
+    <string name="label_fragment_todo_item_reminder">Reminder</string>
+    <string name="label_fragment_todo_item_radiogroup">radioGroup</string>
+    <string name="label_fragment_todo_item_repeat">Repeat</string>
+    <string name="label_fragment_todo_item_daily">daily</string>
+    <string name="label_fragment_todo_item_weekly">weekly</string>
+    <string name="label_fragment_todo_item_monthly">monthly</string>
+    <string name="label_fragment_todo_item_priority">Priority</string>
+    <string name="label_fragment_todo_item_priority_value">priorityValue</string>
+    <string name="label_fragment_todo_item_priority_value_txt">1</string>
+    <string name="action_fragment_todo_item_up">up</string>
+    <string name="action_fragment_todo_item_down">down</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+
 </resources>
+
